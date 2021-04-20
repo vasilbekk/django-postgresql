@@ -22,9 +22,9 @@ $ sudo -u postgres psql postgres
 Создаем и настраиваем пользователя при помощи которого Django будет соединяться с базой данных. Также укажем несколько полезных настроек. Временную зону можете указать свою, например `UTC`
 ```
 create user <username> with password '<password>';
-alter role user_name set client_encoding to 'utf8';
-alter role user_name set default_transaction_isolation to 'read committed';
-alter role user_name set timezone to 'Europe/Moscow';
+alter role <username> set client_encoding to 'utf8';
+alter role <username> set default_transaction_isolation to 'read committed';
+alter role <username> set timezone to 'Europe/Moscow';
 ```
 Созаём базу данных нашего проекта
 ```
